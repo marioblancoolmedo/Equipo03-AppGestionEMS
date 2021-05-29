@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AppGestionEMS.Models.Evaluacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Curso.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grupo.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradeEx)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradePr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeConvocatoria)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curso.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grupo.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradeEx)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradePr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeConvocatoria)
+        </td>
+    </tr>
+}
+
+</table>

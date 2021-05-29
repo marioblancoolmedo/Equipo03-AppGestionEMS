@@ -1,0 +1,50 @@
+﻿@model AppGestionEMS.Models.Matriculacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matriculacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Curso.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Curso.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grupo.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grupo.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.DNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.DNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
